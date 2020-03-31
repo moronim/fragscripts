@@ -1,0 +1,14 @@
+Value Filldown INTERFACE (\S+)
+Value INPUT (Input :)
+Value OUTPUT (Output:)
+Value PACKETS (\d+)
+Value PPS (\d+)
+Value BYTES (\d+)
+Value BPS (\d+)
+
+Start
+  ^\s+Logical\s+interface\s+${INTERFACE} 
+  ^\s+${INPUT}\s+${PACKETS}\s+${PPS}\s+${BYTES}\s+${BPS} -> Record
+  ^\s+${OUTPUT}\s+${PACKETS}\s+${PPS}\s+${BYTES}\s+${BPS} -> Record
+
+EOF
