@@ -14,3 +14,6 @@
 ## Show input/output rates
 	
 	egrep "Input rate | Output rate" ././VRSECGWL01/2020-03-28-dina.txt  | sed 's/(//g' | sed 's/bps//g' | sed 's/pps)//g'
+
+## Show CPU Graph
+	./cpu_graph.sh ./VRSECGWL01/2020-03-28-dina.txt 
